@@ -1,0 +1,37 @@
+#!/bin/bash
+#the world to mdk for ACM and linux 
+MYDATE=`date +%d-%m-%y`
+THIS_HOST=`hostname`
+USER=`whoami`
+while true
+do
+	tput clear
+	echo -e  "\t\t\033[46;30m|=============================================================================================================|\033[0m"
+	echo -e  "\t\t\033[47;30m|           User:$USER                     Host:$THIS_HOST                Date:$MYDATE                |\033[0m"
+	echo -e  "\t\t\033[46;30m|=============================================================================================================|\033[0m"
+	echo -e  "\t\t\033[47;30m|                                       Welcome to ACM 309 mdk world~~~                                       |\033[0m"
+	echo -e  "\t\t\033[47;30m|                         here you can play the game which mdk make!!wish you have fun                        |\033[0m"
+	echo -e  "\t\t\033[47;30m|                         here you can play Eblock or mysnake game,they are make by mdk                       |\033[0m"
+	echo -e  "\t\t\033[47;30m|                                      1.enter E|e to play the Eblock game                                    |\033[0m"
+	echo -e  "\t\t\033[47;30m|                                      2.enter m|M to play the mysnake game                                   |\033[0m"
+	echo -e  "\t\t\033[47;30m|                                      3.enter Q|q to quit and thamk you                                      |\033[0m"
+	echo -e  "\t\t\033[47;30m|                                      4.enter V|v to read mdk information more                               |\033[0m"
+	echo -e  "\t\t\033[47;30m|                                      when the mysnake game over ,please enter Ctrl+C!!!                     |\033[0m"
+	echo -e  "\t\t\033[47;30m|                                      Thank you !!!! Good Luck to you!!!                                     |\033[0m"
+	echo -e  "\t\t\033[46;30m|=============================================================================================================|\033[0m"
+
+	echo -e -n "\t\t\033[44;30menter your CHOICE want to do [E M V Q ]->:\033[0m"
+	read CHOICE
+	case $CHOICE in
+		E|e)Eblock
+		;;
+		M|m)mysnake
+		;;
+		Q|q)exit 0 
+		;;
+		V|v)echo -e -n "\t\t\t\033[47;30mmdk is a vimer and acmer,he love coder and linux!!!\n\t\tmore about he please visit 10.131.10.73 or mdk@server.example.com.\n\t\t\tThanks \n\033[0m"
+		;;
+	esac
+	echo -e -n "\t\t\033[44;30menter the enter key to continue!!!\033[0m"
+	read DUMMY
+done
